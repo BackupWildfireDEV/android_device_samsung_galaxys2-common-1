@@ -204,5 +204,12 @@ TARGET_HAL_PATH := hardware/samsung/exynos4/hal
 TARGET_OMX_PATH := hardware/samsung/exynos/multimedia/openmax
 $(call inherit-product, hardware/samsung/exynos4210.mk)
 
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+PRODUCT_PACKAGES += \
+    webview
+$(call inherit-product, prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk)
+endif
+
 # Include non-open-source parts
 $(call inherit-product, vendor/samsung/galaxys2-common/common-vendor.mk)
