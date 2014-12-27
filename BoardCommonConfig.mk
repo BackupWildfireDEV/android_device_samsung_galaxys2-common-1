@@ -191,6 +191,9 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.exynos4
 # TWRP configs
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+# Chromium Prebuilts
+USE_PREBUILT_CHROMIUM := 1
+
 # Optimization of HWUI
 HWUI_COMPILE_FOR_PERF := true
 
